@@ -246,6 +246,8 @@ in with passthru; stdenv.mkDerivation {
     "--without-ensurepip"
     "--with-system-expat"
     "--with-system-ffi"
+    "--enable-universalsdk"
+    "--with-universal-archs=intel-64"
   ] ++ optionals enableOptimizations [
     "--enable-optimizations"
   ] ++ optionals (pythonOlder "3.7") [
